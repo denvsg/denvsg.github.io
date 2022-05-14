@@ -14,5 +14,17 @@
 4. tuple tuple 中，空元组`()`为False，其他是True
 5. list list 中，空列表`[]`为False，其他是True
 6. dict dict 中，空字典`{}`是False，其他是True
-7. set set 中，空集合`set()`是False，其他是True 
+7. set set 中，空集合`set()`是False，其他是True
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+[上一篇：浮点型](float.md)     
+[回到目录](../Readme.md)    
+[下一篇：字符串](str.md)    
+......   
+
 
