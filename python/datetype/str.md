@@ -37,6 +37,7 @@ print(id(str) == id(str))  # false
 <br />
 <br />
 
+......     
 [上一篇：布尔型](bool.md)    
 [回到目录](../Readme.md)     
 [下一篇：元组](tuble.md)    
