@@ -15,14 +15,63 @@ d = {key1 : value1, key2 : value2, key3 : value3 }
 
 ## 字典基础操作
 
-### 创建列表
+### 创建字典
 
-###   
+1. 使用大括号 { } 创建空字典：
+
+```python
+# 使用大括号 {} 来创建空字典
+emptyDict = {}
+
+# 输出字典
+print(emptyDict)
+
+# 查看字典的数量
+print("Length:", len(emptyDict))
+
+# 查看类型
+print(type(emptyDict))
+```
+
+2. 使用内建函数 dict() 创建字典：
+
+```python
+emptyDict = dict()
+
+# 输出字典
+print(emptyDict)
+
+# 查看字典的数量
+print("Length:", len(emptyDict))
+
+# 查看类型
+print(type(emptyDict))
+```
+
+### 访问字典里的值
+
+把相应的键放入到方括号中，如:
+> _~~可以理解为一种特殊的列表，字典的键则是索引~~_
+
+```python
+dic = {'Name': 'python', 'Age': 31, 'Class': 'Math'}
+print("dic['Name']: ", dic['Name'])
+print("dic['Age']: ", dic['Age'])
+```
+
+<br />
+<br />
 
 ## 字典的一些内建方法
 
 ### len(dict)
-  计算字典元素个数，即键的总数
+
+> 功能：计算字典元素个数，即键的总数
+
+```python
+dic = {'Name': 'python', 'Age': 31, 'Class': 'Math'}
+print(len(dic))
+```
 
 <br />
 <br />
