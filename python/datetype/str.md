@@ -33,3 +33,15 @@ print(id(str) == id(str))  # false
 
 
 
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+[上一篇：浮点型](float.md)    
+[回到目录](../Readme.md)     
+[下一篇：元组](tuble.md)    
+......    
