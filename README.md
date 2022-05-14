@@ -5,17 +5,17 @@
 本仓库是一个学习仓库  
 关于 `python` 并且不限
 
-#### [python学习](python/Readme.md)
+#### [python 学习](python/Readme.md)
 
-#### [shell学习](shell/Readme.md)
+#### [shell 学习](shell/Readme.md)
 
-#### [golang学习](golang/Readme.md)
+#### [golang 学习](golang/Readme.md)
 
-#### [Rust学习](rust/Readme.md)
+#### [Rust 学习](rust/Readme.md)
 
-#### [javascript学习](javascript/Readme.md)
+#### [javascript 学习](javascript/Readme.md)
 
-#### [typescript学习](typescript/Readme.md)
+#### [typescript 学习](typescript/Readme.md)
 
 
 

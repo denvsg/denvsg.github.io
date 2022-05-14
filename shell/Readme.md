@@ -1,11 +1,11 @@
 # shell 学习
 
 
-#### [shell数据类型](datetype/Readme.md)
+#### [shell 数据类型](datetype/Readme.md)
 
-#### [shell条件语句](condition/Readme.md)
+#### [shell 条件语句](condition/Readme.md)
 
-#### [shell循环语句](loop/Readme.md)
+#### [shell 循环语句](loop/Readme.md)
 
 
 

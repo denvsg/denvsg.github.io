@@ -15,11 +15,11 @@
    5.1. 一行代码太长会影响阅读体验，可以在适当位置使用`\` 进行折行  
    5.2. 如果代码被括号 `(),[],{}` 包裹，则可以直接换行，不需使用 `\`
 
-#### [python数据类型](datetype/Readme.md)
+#### [python 数据类型](datetype/Readme.md)
 
-#### [python条件语句](ondition/Readme.md)
+#### [python 条件语句](ondition/Readme.md)
 
-#### [python循环语句](loop/Readme.md)
+#### [python 循环语句](loop/Readme.md)
 
 
 
