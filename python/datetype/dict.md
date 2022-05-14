@@ -59,6 +59,33 @@ print("dic['Name']: ", dic['Name'])
 print("dic['Age']: ", dic['Age'])
 ```
 
+### 修改字典里的值
+
+```python
+dic = {'Name': 'python', 'Age': 31, 'Class': 'Math'}
+dic['Age'] = 55
+print(dic)  # {'Name': 'python', 'Age': 55, 'Class': 'Math'}
+dic["hoppy"] = "write"  # 当键不存在时，会给字典新增键值对，否则则修改键对应的值
+print(dic)  # {'Name': 'python', 'Age': 55, 'Class': 'Math', 'hoppy': 'write'}
+```
+
+### 删除字典的键值对
+
+```python
+dic = {'Name': 'python', 'Age': 31, 'Class': 'Math', 'hoppy': 'write'}
+del dic['Name']  # 删除键 'Name'
+print(dic)  # {'Age': 31, 'Class': 'Math', 'hoppy': 'write'}
+dic.clear()  # 清空字典
+print(dic)  # {}
+del dic  # 删除字典
+print(dic)
+# Traceback (most recent call last):
+#   File "C:/Users/dsg/PycharmProjects/first/python/datetype/test.py", line 12, in <module>
+#     print(dic)
+# NameError: name 'dic' is not defined
+
+```
+
 <br />
 <br />
 
