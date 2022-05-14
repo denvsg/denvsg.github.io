@@ -33,14 +33,14 @@ print(id(str) == id(str))  # false
 
 ### 字符串的一些函数方法
 
-1. 成员判断
+##### 1. 成员判断
 
 ```python
 s = "hello python"
 print("s" in s)
 ```
 
-2. 起始结束
+##### 2. 起始结束
 
 ```python
 s = "hello python"
@@ -48,7 +48,7 @@ print(s.startswith("h"))
 print(s.endswith("n"))
 ```
 
-3. 索引
+##### 3. 索引
 
 ```python
 s = "hello python"
@@ -56,9 +56,9 @@ print(s.index("o"))  # 返回 o 的索引
 print(s.find("llo"))  # 返回 llo 的其实索引
 ```
 
-4. 字符拼接 字符拼接有多种方法
+##### 4. 字符拼接 字符拼接有多种方法
 
-   4.1. 使用 `+` 号
+4.1. 使用 `+` 号
 
 ```python
 a = "abc "
@@ -85,7 +85,7 @@ b = "hello"
 print(b.join(a))  # ahellobhellochello 
 ```
 
-5. 字符串切成列表  
+##### 5. 字符串切成列表  
    `split()` 默认是以空格/制表符切割，可以传入指定字符进行分割
 
 ```python
@@ -93,7 +93,7 @@ a = "hello python nihao "
 print(a.split())  # ahellobhellochello 
 ```
 
-6. 大小写转换  
+##### 6. 大小写转换  
    upper()  转换字符串中的小写字母为大写.  
    lower()  转换字符串中所有大写字符为小写.
 
