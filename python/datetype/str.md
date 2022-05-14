@@ -8,19 +8,19 @@
 字符串可使用 `for` 循环来进行遍历，如:
 
 ```python
-str = 'hello world!'
-for char in str:
+str1 = 'hello world!'
+for char in str1:
     print(char)
 ```
 
 字符串具有索引切片：
 
 ```python
-str = 'hello python'
-print(str[3])  # l
-print(str[1:3])  # ell
-print(str[3:])  # l world
-print(str[::-1])  # nohtyp olleh
+str1 = 'hello python'
+print(str1[3])  # l
+print(str1[1:3])  # ell
+print(str1[3:])  # l world
+print(str1[::-1])  # nohtyp olleh
 ```
 
 字符串不可修改,不可变对象
@@ -30,10 +30,6 @@ str = 'hello'
 str1 = 'a' + str[2:]  # al0
 print(id(str) == id(str))  # false
 ```
-
-
-
-
 
 <br />
 <br />
