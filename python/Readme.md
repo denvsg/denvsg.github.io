@@ -36,11 +36,14 @@ print(a)
 print(type(a))
 ```
 
-#### [python 数据类型](datetype/Readme.md)
+<br />
+<br />
 
-#### [python 条件语句](condition/Readme.md)
+### [python 数据类型](datetype/Readme.md)
 
-#### [python 循环语句](loop/Readme.md)
+### [python 条件语句](condition/Readme.md)
+
+### [python 循环语句](loop/Readme.md)
 
 <br />
 <br />
@@ -78,6 +81,7 @@ print(~a)  # 1101 1110
 <br />
 
 #### Python运算符优先级
+
 | 运算符                      | 描述                                |  
 |:-------------------------|:----------------------------------|
 | **                       | 指数 (最高优先级)                        |              
