@@ -35,7 +35,7 @@ table.cell(rowx,colx)   #返回单元格对象 类型+数据 table.cell_type(row
 
 #### 7、遍历读取示例
 
-```
+```python
 for i in range(nrows):
     for j in range(ncol):
         print(table.cell_value(i, j), end=" ")
@@ -96,7 +96,7 @@ row：单元格所在的行 column：单元格坐在的列 value：单元格的�
 
     遍历单元格
 
-```
+```python
 sheet = wb['sheetname']
 for row in sheet.rows:
     # 循环遍历每一个单元格
