@@ -12,13 +12,11 @@ for key in dic:
 c = 1 + 5j
 print(c, type(c))  # (1+5j) <class 'complex'>
 
-a = 5
-if a > 4:
-    print("a > 0")
-elif 0 < a < 4:
-    print("0 < a < 4")
-else:
-    print("a < 0")
-a = "hello world,hello python!"
-if "hello" in a:
-    print("a contains hello")
+for i in range(9):
+    pass
+
+for i in range(9):
+    ...
+
+for i in range(9):
+    ''''''
