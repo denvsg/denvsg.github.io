@@ -15,8 +15,13 @@
    5.1. 一行代码太长会影响阅读体验，可以在适当位置使用`\` 进行折行  
    5.2. 如果代码被括号 `(),[],{}` 包裹，则可以直接换行，不需使用 `\`
 
-<br/>
-<br/>
+<br />
+<br />
+
+### [进入目录](contents_page.md)
+
+<br />
+<br />
 
 6. python 输入输出  
    输入是 `input()` 函数
@@ -39,33 +44,7 @@ print(type(a))
 <br />
 <br />
 
-### [python 数据类型](datetype/Readme.md)
-
-### [python 条件语句](condition/Readme.md)
-
-### [python 循环语句](loop/Readme.md)
-
-### [python 函数](function/Readme.md)
-
-### [python 类](class/Readme.md)
-
-### [python 装饰器](Decorators/Readme.md)
-
-### [python 异步](asyncio/Readme.md)
-
-### [python 协程](coroutines/coroutines.md)
-
-### [python 多线程](multithreading/Readme.md)
-
-### [python 文件读写](file_io/Readme.md)
-
-### [python 内置库](common_built-in_Libraries/Readme.md)
-
-### [python 第三方库](common_third_party_libraries/Readme.md)
-
-### [python 网络库](network_libraries/Readme.md)
-
-### [python 爬虫](spider/Readme.md)
+### [进入目录](contents_page.md)
 
 <br />
 <br />
@@ -127,5 +106,9 @@ print(~a)  # 1101 1110
 <br />
 
 ......   
+<br />
+<br />
+
+[进入学习目录](contents_page.md)  
 [回到主目录](../README.md)   
 ......    
