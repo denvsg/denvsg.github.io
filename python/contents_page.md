@@ -1,7 +1,6 @@
 # 目录
 
 <br />
-<br />
 
 ### [python 数据类型](datetype/Readme.md)
 
@@ -39,15 +38,7 @@
 <br />
 <br />
 
-<br />
-<br />
-<br />
-<br />
-<br />
-
-......   
-<br />
-<br />
+......
 
 [返回索引页](Readme.md)  
 [回到主目录](../README.md)   
