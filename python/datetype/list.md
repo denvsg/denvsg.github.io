@@ -32,6 +32,16 @@ print(list1[1])  # Microsoft
 print(list1[1:3])  # ['Microsoft',1997]
 ```
 
+##### 同时遍历索引及元素
+
+> 使用 `enumerate` 关键字
+
+```python
+list1 = ['Google', 'Microsoft', 1997, 2000]
+for index, element in enumerate(list1):
+    print(index, element)
+```
+
 ### 列表 `[list]` 的一些操作
 
 #### 1. 增加元素 append

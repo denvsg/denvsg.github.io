@@ -13,6 +13,26 @@ d = {key1 : value1, key2 : value2, key3 : value3 }
 值可以取任何数据类型，但键必须是不可变的，如字符串，数字。 如：  
 `dic = {'name': 'python', 'likes': 123, 'url': 'www.python.org'}`
 
+<br />
+
+##### 遍历字典方式
+
+1. 使用 `for` 循环
+
+```python
+dic = {'name': 'python', 'likes': 123, 'url': 'www.python.org'}
+for key in dic:
+    print(key, dic[key])
+```
+
+2. 使用 `for items()`
+
+```python
+dic = {'name': 'python', 'likes': 123, 'url': 'www.python.org'}
+for key, value in dic.items():
+    print(key, value)
+```
+
 ## 字典基础操作
 
 ### 创建字典
@@ -99,6 +119,8 @@ print(dic)
 dic = {'Name': 'python', 'Age': 31, 'Class': 'Math'}
 print(len(dic))
 ```
+
+### 
 
 <br />
 <br />
