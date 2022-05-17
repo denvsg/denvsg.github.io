@@ -6,7 +6,20 @@
 
 #### 1、使用xlrd.open_workbook(file)创建一个工作表对象
 
+```python
+import xlrd
+
+wb = xlrd.open_workbook(file)
+```
+
 #### 2、使用 sheet_names()  方法获取workbook中所有工作表的名字
+
+```python
+import xlrd
+
+wb = xlrd.open_workbook(file)
+sheetnames = wb.sheet_names()
+```
 
 #### 3、获取表格：以下三个函数都会返回一个xlrd.sheet.Sheet()对象
 
