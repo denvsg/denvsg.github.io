@@ -1,7 +1,10 @@
+# shell 循环
+
+## shell 循环有两种，while 和 for
+for 循环有几种格式
 
 
-
-
+#
 
 
 
