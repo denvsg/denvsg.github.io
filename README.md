@@ -5,7 +5,7 @@
 本仓库是一个学习仓库  
 关于 `python` 及一些编程语言的学习，并且不限
 
-#### [C语言 使用学习](git/Readme.md)
+#### [C语言 使用学习](C/Readme.md)
 
 #### [git 使用学习](git/Readme.md)
 
