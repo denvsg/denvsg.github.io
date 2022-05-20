@@ -17,7 +17,7 @@ num=0
 while [ ${num} -lt 10 ] 
 do
  echo ${num} 
- let "i+=1"  # 新版本 bash 使用 let 关键字肤质数学计算
+ let "i+=1"  # 新版本 bash 使用 let 关键字作为数学计算
 done
 exit 0
 ```
