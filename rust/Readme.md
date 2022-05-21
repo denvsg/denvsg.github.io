@@ -1,6 +1,7 @@
 # Rust 程序设计学习
 
 
+##### [进入目录](contents_page.md)
 
 
  [Rust 编译器下载](https://forge.rust-lang.org/infra/other-installation-methods.html)
