@@ -1,3 +1,5 @@
 # denvsg.github.io
 
-[page2](contents.md)
+[page](contents.md)
+
+[page2](page2/Readme.md)
