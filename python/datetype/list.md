@@ -132,7 +132,7 @@ print(min(lis1))  # 0
 
 ......     
 [上一篇：元组](tuple.md)     
-[回到目录](../Readme.md)    
+[回到目录](../contents_page.md)    
 [下一篇：字典](dict.md)    
 ......    
 

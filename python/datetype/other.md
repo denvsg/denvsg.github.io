@@ -17,7 +17,7 @@ print(c, type(c))  # (1+5j) <class 'complex'>
 
 ......     
 [上一篇：集合](set.md)      
-[回到目录](../Readme.md)    
+[回到目录](../contents_page.md)    
 ......   
 
 

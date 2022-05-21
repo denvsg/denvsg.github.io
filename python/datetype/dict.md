@@ -130,7 +130,7 @@ print(len(dic))
 
 ......     
 [上一篇：列表](list.md)     
-[回到目录](../Readme.md)    
+[回到目录](../contents_page.md)    
 [下一篇：集合](set.md)    
 ......   
 

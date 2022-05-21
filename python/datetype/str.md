@@ -107,7 +107,7 @@ print(a.split())  # ahellobhellochello
 
 ......     
 [上一篇：布尔型](bool.md)    
-[回到目录](../Readme.md)     
+[回到目录](../contents_page.md)     
 [下一篇：元组](tuble.md)    
 ......    
 
