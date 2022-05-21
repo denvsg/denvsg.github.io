@@ -1,7 +1,7 @@
 /.idea
 /.gitee
-/codestyles
-/inspection
+/codestyles/
+/inspection/
 /*.xml
 .gitignore
 wsl.distributions.xml
@@ -11,4 +11,3 @@ editor.xml
 filetypes.xml
 laf.xml
 web-types-npm-loader.xml
-inspection
