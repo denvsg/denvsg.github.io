@@ -26,7 +26,7 @@
 
 ......   
 [上一篇：浮点型](float.md)     
-[回到目录](../Readme.md)    
+[回到目录](../contents_page.md)    
 [下一篇：字符串](str.md)    
 ......   
 

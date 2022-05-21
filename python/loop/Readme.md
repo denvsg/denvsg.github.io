@@ -17,7 +17,7 @@ python 循环语句有两种， `while` 和 `for`
 
 ......      
 [while 循环](while_loop_statement.md)  
-[回到目录](../Readme.md)     
+[回到目录](../contents_page.md)     
 [for 循环](for_loop_satetement.md)  
 ......   
 

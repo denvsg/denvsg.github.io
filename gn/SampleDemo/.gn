@@ -1,0 +1,7 @@
+buildconfig = "//build/BUILDCONFIG.gn"
+
+default_args = {
+    is_component_build = false
+}
+
+script_executable = "python3"
