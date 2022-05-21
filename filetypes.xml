@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="LICENSE" type="AUTO_DETECTED" />
       <mapping pattern=".gn" type="PLAIN_TEXT" />
+      <removed_mapping pattern=".gn" approved="true" type="GN" />
     </extensionMap>
   </component>
 </application>
