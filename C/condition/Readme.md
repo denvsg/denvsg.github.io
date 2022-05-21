@@ -14,7 +14,7 @@ int main()
     int a=5;
     if(a>0)
     {
-        printf("%d > 0\n",%a);
+        printf("%d > 0\n",a);
     }
     return 0;
 }
@@ -32,9 +32,9 @@ int main()
     int a=5;
     if(a>0)
     {
-        printf("%d > 0\n",%a);
+        printf("%d > 0\n",a);
     }else{
-        printf("%d <= 0\n",%a);
+        printf("%d <= 0\n",a);
     }
     return 0;
 }
@@ -53,12 +53,12 @@ int main()
     if(a>0)
     {
         if(a > 3){
-            printf("%d > 3\n",%a);
+            printf("%d > 3\n",a);
         }else{
-            printf("0 < %d < 3\n",%a);
+            printf("0 < %d < 3\n",a);
         }
     }else{
-        printf("%d <= 0\n",%a);
+        printf("%d <= 0\n",a);
     }
     return 0;
 }
@@ -76,15 +76,15 @@ int main()
     int a=5;
     switch(a)
     {
-        case 0: printf("%d = 0\n",%a); break;
-        case 1: printf("%d = 1\n",%a); break;
-        case 2: printf("%d = 2\n",%a); break;
-        case 3: printf("%d = 3\n",%a); break;
-        case 4: printf("%d = 4\n",%a); break;
-        case 5: printf("%d = 5\n",%a); break;
-        case 6: printf("%d = 6\n",%a); break;
-        case 7: printf("%d = 7\n",%a); break;
-        default:printf("%d more than 7 or less then 0.\n");
+        case 0: printf("%d = 0\n",a); break;
+        case 1: printf("%d = 1\n",a); break;
+        case 2: printf("%d = 2\n",a); break;
+        case 3: printf("%d = 3\n",a); break;
+        case 4: printf("%d = 4\n",a); break;
+        case 5: printf("%d = 5\n",a); break;
+        case 6: printf("%d = 6\n",a); break;
+        case 7: printf("%d = 7\n",a); break;
+        default:printf("%d more than 7 or less then 0.\n",a);
     }
     return 0;
 }
@@ -106,7 +106,7 @@ int main()
 int main()
 {
     int a=5;
-    a > 0 : printf("%d > 0\n",%a"):printf("%d < 0\n",%a);
+    a > 0 : printf("%d > 0\n",a"):printf("%d < 0\n",a);
     return 0;
 }
 ```
