@@ -260,4 +260,4 @@ func main() {
 
 
 
-[strings usage](https://pkg.go.dev/strings)
+[strings usage](https://pkg.go.dev/strin)
