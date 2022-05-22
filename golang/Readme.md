@@ -9,6 +9,7 @@
 ## Golang 介绍
 [下载 golang sdk](https://golang.google.cn/dl/)  
 
+[镜像站下载](https://mirrors.aliyun.com/golang/?spm=a2c6h.13651104.0.0.203872b6cMGlp7)
 
 ### go 设置代理
 `go env -w GOPROXY=https://goproxy.cn,direct` 
