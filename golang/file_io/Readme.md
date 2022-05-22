@@ -1,5 +1,7 @@
 # golang 文件读写
 
+#### [目录操作](directory.md)
+
 ### 1. 打开文件
 
 ```golang
