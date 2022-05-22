@@ -25,7 +25,7 @@
 <br />
 <br />
 
-Welcome to study together, and welcome pr.
+**Welcome to study together, and welcome pr.**
 
 <br />
 <br />
