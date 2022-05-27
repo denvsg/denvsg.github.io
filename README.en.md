@@ -20,10 +20,10 @@ $ ssh -T -p 443 git@ssh.github.com
 
 要在 SSH 配置文件中设置此设置，请在 ~/.ssh/config 编辑该文件，并添加以下部分：
 
-Host github.com
-Hostname ssh.github.com
-Port 443
-User git
+Host github.com  
+Hostname ssh.github.com  
+Port 443  
+User git  
 您可以通过再次连接到 GitHub.com 测试此项是否有效：
 
 $ ssh -T git@github.com
