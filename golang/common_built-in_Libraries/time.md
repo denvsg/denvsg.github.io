@@ -56,4 +56,18 @@ func main() {
 }
 ```
 #### 4. func Now() Time // Now 返回当前本地时间。
-```golang```
+```golang
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main(){
+    fmt.println(time.Now())
+}
+```
+
+
+[back](Readme.md)
