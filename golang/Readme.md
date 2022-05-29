@@ -19,7 +19,7 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,https://goproxy.io,direct
 ```
 
-> GOPROXY，目前国内常用的go代理
+> GOPROXY，目前国内常用的go代理  
 goproxy.io    
 https://goproxy.io,direct  
 七牛云     
