@@ -261,3 +261,5 @@ func main() {
 
 
 [strings usage](https://pkg.go.dev/strin)
+
+[back](Readme.md)
