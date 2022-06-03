@@ -30,7 +30,7 @@ git checkout -f  # 强制放弃 index 和 工作区 的改动,这是不可逆的
 
 ## git commit 记录对存储库的更改
 
-git commit -m "message"：提交暂存区到本地仓库中，[message] 可以是一些备注信息。   
+`git commit -m "message"`：提交暂存区到本地仓库中，[message] 可以是一些备注信息。   
 git commit -a： -a参数设置修改文件后不需要执行 git add 命令，直接来提交，文件添加还是需要先git add 再commit   
 git commit --amend：出现编辑界面（vim），按i键进入编辑模式，编辑完后按ESC键退出编辑，然后输入:wq回车退出并保存修改，完成提交
 
@@ -68,10 +68,10 @@ git push -d 删除远程分支
 
 ## git remote - 管理一组跟踪的存储库/远程仓库
 
-git remote -v 查看远程仓库  
-git remote add <url>  添加远程仓库  
-git remote rename <old> <new>  将名为 <old> 的远程重命名为 <new>。将更新远程跟踪的所有分支和配置设置。    
-git remote rm name 删除远程<name>仓库.
+`git remote -v` 查看远程仓库  
+`git remote add <url>`  添加远程仓库  
+`git remote rename <old> <new> ` 将名为 <old> 的远程重命名为 <new>。将更新远程跟踪的所有分支和配置设置。    
+`git remote rm name` 删除远程<name>仓库.
 
 ` git remote add -f -t master -m master origin git://example.com/git.git/`
 
@@ -89,11 +89,11 @@ git push name HEAD:refs/for/分支名   提交代码.
 
 ## git am - 将修补程序应用于文件和/或索引
 
-git am llvm.patch 将名字为llvm.patch的patch打上    
-git am --signoff llvm.patch 添加-s或者--signoff，还可以把自己的名字添加为signed off by信息，作用是注明打patch的人是谁，因为有时打patch的人并不是patch的作者 git am ~
-/patch-set/*.patch 将路径~/patch-set/*.patch按先后顺序打上    
-git am --abort 当git am失败时，用以将已经在am过程中打上的patch废弃掉（比如有三个patch，打到第三个patch时有冲突，那么这条命令就把打上的前面两条patch丢弃掉，返回没有打patch的状态） git am
---resolved 当git am失败，解决完冲突之后，这条命令会接着打patch 合入一个patch包
+`git am llvm.patch` 将名字为llvm.patch的patch打上    
+`git am --signoff llvm.patch` 添加-s或者--signoff，还可以把自己的名字添加为signed off by信息，作用是注明打patch的人是谁，因为有时打patch的人并不是patch的作者   
+`git am ~/patch-set/*.patch` 将路径~/patch-set/*.patch按先后顺序打上    
+`git am --abort` 当git am失败时，用以将已经在am过程中打上的patch废弃掉（比如有三个patch，打到第三个patch时有冲突，那么这条命令就把打上的前面两条patch丢弃掉，返回没有打patch的状态）   
+`git am --resolved`  当git am失败，解决完冲突之后，这条命令会接着打patch 合入一个patch包
 > git apply是另外一种打patch的命令，其与git am的区别是，
 > git apply并不会将commit message等打上去，打完patch后需要重新git add和git commit，
 > 而git am会直接将patch的所有信息打上去，而且不用重新git add和git commit,author也是patch的author而不是打patch的人
@@ -149,9 +149,9 @@ git rebase master topic
 
 ## git reset Git回退命令
 
-git reset --hard 版本序列号 回退到指定版本    
-git reset --soft HEAD~1 撤回上一次的提交，保留提交前的代码	   
-git reset HEAD . 撤回上一次文件添加，保留原来修改
+`git reset --hard 版本序列号` 回退到指定版本    
+`git reset --soft HEAD~1` 撤回上一次的提交，保留提交前的代码	   
+`git reset HEAD .` 撤回上一次文件添加，保留原来修改
 
 ## git revert - 还原一些现有的提交
 
@@ -168,11 +168,11 @@ git revert -n master~5..master~2
 
 ## git format-patch 生成patch
 
-git format-patch HEAD^ 生成最近一次commit的patch	  
-git format-patch HEAD^^ 生成最近两次commit的patch   
-git format-patch <r1>..<r2/>  生成两个commit间的修改的patch,（包含两个commit. <r1>和<r2>都是具体的commit号)   
-git format-patch -1 <r1>   生成单个commit的patch	  
-git format-patch <r1>    生成某commit以来的修改patch（不包含该commit） git format-patch --root <r1>   生成从根到r1提交的所有patch
+`git format-patch HEAD^` 生成最近一次commit的patch	  
+`git format-patch HEAD^^` 生成最近两次commit的patch   
+`git format-patch <r1>..<r2/>`  生成两个commit间的修改的patch,（包含两个commit. <r1>和<r2>都是具体的commit号)   
+`git format-patch -1 <r1>`   生成单个commit的patch	  
+`git format-patch <r1> `   生成某commit以来的修改patch（不包含该commit） git format-patch --root <r1>   生成从根到r1提交的所有patch
 
 
 
