@@ -2,7 +2,7 @@
 
 #### [C 语言 数据类型](datetype/Readme.md)
 
-#### [C 语言 条件语句](ondition/Readme.md)
+#### [C 语言 条件语句](condition/Readme.md)
 
 #### [C 语言 循环语句](loop/Readme.md)
 
