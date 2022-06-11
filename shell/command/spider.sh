@@ -1,4 +1,5 @@
 #!bash
+set -x
 
 alllink=()
 #root_link=$(curl https://m.jj20.com/bz/nxxz/shxz/ |grep 'm.jj20.com')
