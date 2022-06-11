@@ -36,7 +36,7 @@ fi
 echo "开始编译打包"
 
 if ! grep 'hvigor' package.json &> /dev/null;then
-    compile_cmd=' "scripts": {\n    "build": "hvigor clean assembleHap"\n  },'
+    compile_cmd=' "scripts": {\n    "build": "hvigor clean assembleHap",\n    "clean": "hvigor clean"\n  },'
     sed -i "/version/ i\ ${compile_cmd}" package.json
 fi
 
