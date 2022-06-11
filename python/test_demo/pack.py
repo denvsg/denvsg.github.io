@@ -21,7 +21,7 @@ def check_env() -> bool:
     return True
 
 
-class CompilerTest(unittest.TestCase):
+class CompileTest(unittest.TestCase):
     project_path = "C:/Users/dsg/DevEcoStudioProjects/MyApplication"
     pages = 'entry/build/default/intermediates/assets/default/ets/pages'
     node_modules_path = 'entry/build/default/intermediates/assets/default/node_modules'
@@ -35,8 +35,9 @@ class CompilerTest(unittest.TestCase):
     def setUp(self) -> None:
         os.chdir(path=self.project_path)
         print(os.getcwd())
-        if "node_modelus" in os.listdir():
-            subprocess.run("npm install")
+        if "node_modules" not in os.listdir():
+            print("run npm install.")
+            subprocess.run("npm install", shell=True, cwd=self.project_path)
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -58,11 +59,19 @@ class CompilerTest(unittest.TestCase):
     def test_compile_nodeModules(self):
         modules_path = os.path.join(self.project_path, self.node_modules_path)
         file_list = []
-        for root, dirs, files in os.walk(modules_path):
-            for file in files:
-                if file.endswith((".js", ".abc")):
-                    file_list.append(file)
-        self.assertIn("index.abc", file_list, msg='node_modules compiler fail')
+        if os.path.exists(modules_path):
+            print("path is true")
+            for root, dirs, files in os.walk(modules_path):
+                for file in files:
+                    if file.endswith((".js", ".abc")):
+                        file_list.append(file)
+            self.assertIn("index.abc", file_list, msg='node_modules compiler fail')
+        self.assertTrue(os.path.exists(modules_path), msg="node_module not compile")
+
+    def test_add(self):
+        a = 1
+        b = 2
+        self.assertEqual(a + b, 2, "not equal")
 
 
 if __name__ == "__main__":
