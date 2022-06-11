@@ -65,6 +65,12 @@ if [ ${status} -eq 0 ];then
     fi
 fi
 
+echo "modify compile mode"
+compile_mode='    "compileMode":"esmodule"'
+if ! grep '^[[:blank:]]\+compileMode' entry/build-profile.json5 &> /dev/null;then
+    sed -a "/buildOption/ i\ ${compile_mode}" entry/build-profile.json5
+fi
+
 sleep 2
 exit 0
 C:\Users\dsg\DevEcoStudioProjects\MyApplication        x

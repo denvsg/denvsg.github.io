@@ -6,13 +6,16 @@ import unittest
 
 def check_env() -> bool:
     all_env = os.environ.get("PATH")
-    if "git" in all_env.lower():
+    git_status, git_version = subprocess.getstatusoutput('git --version')
+    node_status, node_version = subprocess.getstatusoutput('node -v')
+    npm_status, npm_version = subprocess.getstatusoutput('npm -v')
+    if "git" in all_env.lower() or git_status == 0:
         print("Git ready.")
     else:
         return False
-    if "nodejs" in all_env.lower():
+    if "nodejs" in all_env.lower() or node_status == 0:
         print("nodejs ready.")
-    if "npm" in all_env.lower():
+    if "npm" in all_env.lower() or npm_status == 0:
         print("npm ready.")
 
     return True
