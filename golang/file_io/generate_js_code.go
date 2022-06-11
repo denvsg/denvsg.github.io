@@ -1,5 +1,5 @@
-// build with commond: go build generate_js_code.go
-// run with commond: go run generate_js_code.go
+// build with command: go build generate_js_code.go
+// run with command: go run generate_js_code.go
 package main
 
 import (
