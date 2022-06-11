@@ -1,6 +1,21 @@
 import os
 import subprocess
+import sys
 import unittest
+
+
+def check_env() -> bool:
+    all_env = os.environ.get("PATH")
+    if "git" in all_env.lower():
+        print("Git ready.")
+    else:
+        return False
+    if "nodejs" in all_env.lower():
+        print("nodejs ready.")
+    if "npm" in all_env.lower():
+        print("npm ready.")
+
+    return True
 
 
 class CompilerTest(unittest.TestCase):
@@ -10,6 +25,8 @@ class CompilerTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
+        if not check_env():
+            sys.exit(1)
         subprocess.check_output("npm run build", shell=True, cwd=cls.project_path)
 
     def setUp(self) -> None:
