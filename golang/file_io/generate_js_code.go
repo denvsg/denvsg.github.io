@@ -39,7 +39,7 @@ func main() {
 		fmt.Println(code)
 	}
 
-	end_file := generate_code_end_file()
+	end_file := generate_code_end_file(num - 1)
 	end_file_name := fmt.Sprintf(targetDirectory+"/demo"+"%d"+".js", num-1)
 	write_to_file(end_file, end_file_name)
 
@@ -57,13 +57,13 @@ func generate_code_package(dirname string) string {
 }
 
 func generate_code_index() string {
-	code_template := `const { infoDemo as info, showInfoDemo as showinfo } = require("./demo0")
+	code_template := `const { infoDemo0, showInfoDemo0} = require("./demo0")
 
 export let info = "hello world demo"
 
 export const showInfo = function () {
-    console.log(infoDemo)
-    showInfoDemo()
+    console.log(infoDemo0)
+    showInfoDemo0()
     console.log("show info")
 }` + "\n"
 
@@ -73,36 +73,38 @@ export const showInfo = function () {
 
 func generate_code(number int) string {
 	// code_template := `module.exports=function demo` + "%d" + `(){
-	//     for (i = 0; i < 10; i++) {
+	//     for (var i = 0; i < 10; i++) {
 	//         console.log("this is " + i + " times")
 	//     }
 	// }` + "\n"
 
-	code_template2 := `const { infoDemo as info, showInfoDemo as showinfo } = require("./demo` + "%d" + `")
+	code_template2 := `const { infoDemo` + "%d" + `, showInfoDemo` + "%d" + ` } = require("./demo` + "%d" + `")
 
-export let infoDemo = "hello world demo"
+export let infoDemo` + "%d" + ` = "hello world demo"
 
-export const showInfoDemo = function () {
-    for (i = 0; i < 10; i++) { 
-        console.log(info)
-        showinfo()
+export const showInfoDemo` + "%d" + ` = function () {
+    for (var i = 0; i < 10; i++) { 
+        console.log(infoDemo` + "%d" + `)
+        showInfoDemo` + "%d" + `()
         console.log("show info")
     }
 }` + "\n"
-	codes := fmt.Sprintf(code_template2, number+1)
+	codes := fmt.Sprintf(code_template2, number+1, number+1, number+1, number, number, number+1, number+1)
 	return codes
 }
 
-func generate_code_end_file() string {
-	code_template := `export let infoDemo = "hello world demo"
+func generate_code_end_file(num int) string {
+	code_template := `export let infoDemo` + "%d" + ` = "hello world demo"
 
-export const showInfoDemo = function () {
-    console.log(infoDemo)
-    console.log("infoDemoshowInfoDemo()")
-    console.log("show info")
+export const showInfoDemo` + "%d" + ` = function () {
+    for (var i = 0; i < 10; i++) { 
+        console.log(infoDemo` + "%d" + `)
+        console.log("infoDemoshowInfoDemo` + "%d" + `()")
+        console.log("show info")
+    }
 }` + "\n"
 
-	codes := fmt.Sprintf(code_template)
+	codes := fmt.Sprintf(code_template, num, num, num, num)
 	return codes
 }
 
