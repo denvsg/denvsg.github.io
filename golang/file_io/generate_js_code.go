@@ -57,7 +57,7 @@ func generate_code_package(dirname string) string {
 }
 
 func generate_code_index() string {
-	code_template := `const { infoDemo, showInfoDemo } = require("./demo0")
+	code_template := `const { infoDemo as info, showInfoDemo as showinfo } = require("./demo0")
 
 export let info = "hello world demo"
 
@@ -78,14 +78,14 @@ func generate_code(number int) string {
 	//     }
 	// }` + "\n"
 
-	code_template2 := `const { infoDemo, showInfoDemo } = require("./demo` + "%d" + `")
+	code_template2 := `const { infoDemo as info, showInfoDemo as showinfo } = require("./demo` + "%d" + `")
 
 export let infoDemo = "hello world demo"
 
 export const showInfoDemo = function () {
     for (i = 0; i < 10; i++) { 
-        console.log(infoDemo)
-        showInfoDemo()
+        console.log(info)
+        showinfo()
         console.log("show info")
     }
 }` + "\n"
@@ -98,7 +98,7 @@ func generate_code_end_file() string {
 
 export const showInfoDemo = function () {
     console.log(infoDemo)
-    showInfoDemo()
+    console.log("infoDemoshowInfoDemo()")
     console.log("show info")
 }` + "\n"
 
