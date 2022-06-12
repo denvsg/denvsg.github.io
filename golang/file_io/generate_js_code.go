@@ -80,9 +80,9 @@ func generate_code(number int) string {
 
 	code_template2 := `const { infoDemo, showInfoDemo } = require("./demo` + "%d" + `")
 
-export let info = "hello world demo"
+export let infoDemo = "hello world demo"
 
-export const showInfo = function () {
+export const showInfoDemo = function () {
     for (i = 0; i < 10; i++) { 
         console.log(infoDemo)
         showInfoDemo()
@@ -94,9 +94,9 @@ export const showInfo = function () {
 }
 
 func generate_code_end_file() string {
-	code_template := `export let info = "hello world demo"
+	code_template := `export let infoDemo = "hello world demo"
 
-export const showInfo = function () {
+export const showInfoDemo = function () {
     console.log(infoDemo)
     showInfoDemo()
     console.log("show info")
