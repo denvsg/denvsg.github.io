@@ -18,6 +18,11 @@ func main() {
 	fmt.Scan(&num)
 
 	targetDirectory := "demo"
+	_, errExistDir := os.Stat(targetDirectory)
+	if errExistDir == nil {
+		fmt.Println("\033[31mdir exist, delete it ...\033[0m")
+		os.RemoveAll(targetDirectory)
+	}
 	err := os.Mkdir(targetDirectory, 0666) //当前目录新建demo目录
 	if err != nil {
 		fmt.Println(err)
