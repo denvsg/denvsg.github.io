@@ -63,7 +63,8 @@ func f3() {
 }
 
 func compile() {
-	fmt.Println(os.Getwd())
+	pwd, _ := os.Getwd()
+	fmt.Println(pwd)
 
 	chErr := os.Chdir(ProjectPath)
 	if chErr != nil {
@@ -87,7 +88,8 @@ func compile() {
 }
 
 func clear() {
-	fmt.Println(os.Getwd())
+	pwd, _ := os.Getwd()
+	fmt.Println(pwd)
 
 	chErr := os.Chdir(ProjectPath)
 	if chErr != nil {
