@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding:utf8 -*-
 import os
+import platform
 import re
 import subprocess
 import sys
+
+ENCODE = 'gbk' if platform.system() == 'Windows' else 'utf8'
 
 
 def exec_command(cmd, log_path='run.log', **kwargs):
@@ -21,7 +24,7 @@ def exec_command(cmd, log_path='run.log', **kwargs):
         process = subprocess.Popen(cmd,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT,
-                                   encoding='utf-8',
+                                   encoding=ENCODE,
                                    **kwargs)
         for line in iter(process.stdout.readline, ''):
             if is_log_filter:
@@ -38,8 +41,6 @@ def exec_command(cmd, log_path='run.log', **kwargs):
     if ret_code != 0:
         if is_log_filter:
             get_failed_log(log_path)
-
-        raise OHOSException('Please check build log in {}'.format(log_path))
 
 
 def get_failed_log(log_path):
@@ -67,10 +68,6 @@ def get_failed_log(log_path):
     if os.path.isfile(error_log):
         with open(error_log, 'rt', encoding='utf-8') as log_file:
             print_error(log_file.read())
-
-
-class OHOSException(Exception):
-    ...
 
 
 class Colors:
@@ -140,11 +137,11 @@ def message(level, msg):
         msg += '\n'
     if level == 'error':
         msg = msg.replace('error:', f'{Colors.ERROR}error{Colors.END}:')
-        return f'{Colors.ERROR}[Compile {level.upper()}]{Colors.END} {msg}'
+        return f'{Colors.ERROR}[Run {level.upper()}]{Colors.END} {msg}'
     elif level == 'info':
-        return f'[Compile {level.upper()}] {msg}'
+        return f'[Run {level.upper()}] {msg}'
     else:
-        return f'{Colors.WARNING}[Compile {level.upper()}]{Colors.END} {msg}'
+        return f'{Colors.WARNING}[Run {level.upper()}]{Colors.END} {msg}'
 
 
 if __name__ == "__main__":
