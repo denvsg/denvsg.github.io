@@ -4,7 +4,7 @@
 str="this is test statements."
 val="This is Test statements."
 
-# 1.使用两个字符串直接比较
+# 1.使用两个字符串直接比较  实质上是比较两个字符串的编码[ascii]顺序
 if [ "${str}" = "${val}" ]; then
   echo "<${str}> IS THE SAME AS <${val}>"
 elif [ "${str}" \< "${val}" ]; then
@@ -57,8 +57,18 @@ else
 fi
 
 # 5.带正则的匹配
+str="this is test statements."
 if [[ ${str} =~ ^this.* ]]; then
   echo "<${str}> IS START　WITH　'this'"
 else
   echo "<${str}> IS NOT START　WITH　'this'"
+fi
+
+# 6. 模式匹配比较
+str="this is test statements."
+val="This is Test statements."
+if [[ $str == t?* ]];then
+  echo "$str start with 't'"
+elif [[ $str == t* ]];then
+  echo "$str not contain 't'"
 fi
