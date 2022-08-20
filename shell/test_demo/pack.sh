@@ -35,7 +35,7 @@ fi
 
 echo "开始编译打包"
 
-if ! grep 'hvigor' package.json &> /dev/null;then
+if ! grep 'hvigor clean' package.json &> /dev/null;then
     compile_cmd=' "scripts": {\n    "build": "hvigor clean assembleHap",\n    "clean": "hvigor clean"\n  },'
     sed -i "/version/ i\ ${compile_cmd}" package.json
 fi
@@ -54,21 +54,26 @@ page_compile_path=${root_dir}${pages}
 node_modules_compile_path=${root_dir}${node_modules_path}
 if [ ${status} -eq 0 ];then
     if find ${page_compile_path} -name index.js &> /dev/null;then
-        echo "pages compiler success"
+        echo -e "\033[32m Case ${root_dir##*/} pages compiler success\033[0m"
     else
-        echo -e "\e[31m pages compiler fail\e[0m"
+        echo -e "\e[31m Case ${root_dir##*/} pages compiler fail\e[0m"
     fi
     if find ${node_modules_compile_path} -name "*.js" &> /dev/null;then
-        echo "node_modules compiler success"
+        echo -e "\033[32m Case ${root_dir##*/} node_modules compiler success\n\033[0m"
     else
-        echo -e "\e[31m node_modules compiler fail\e[0m"
+        echo -e "\e[31m Case ${root_dir##*/} node_modules compiler fail\n\e[0m"
     fi
 fi
 
 echo "modify compile mode"
-compile_mode='    "compileMode":"esmodule"'
-if ! grep '^[[:blank:]]\+compileMode' entry/build-profile.json5 &> /dev/null;then
-    sed -a "/buildOption/ i\ ${compile_mode}" entry/build-profile.json5
+compile_mode='    "compileMode":"esmodule",'
+if ! grep '^[[:blank:]]\+"compileMode"' entry/build-profile.json5 &> /dev/null;then
+    sed -a "/buildOption/a ${compile_mode}" entry/build-profile.json5
+    if [ $? -ne 0 ];then
+        echo -e "\033[31m modify compile mode fail\n\033[0m"
+    fi
+else
+    echo -e "compile mode has been modified."
 fi
 
 sleep 2

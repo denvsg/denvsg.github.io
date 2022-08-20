@@ -18,6 +18,7 @@ func main() {
 	fmt.Scan(&num)
 
 	targetDirectory := "demo"
+	extensionSuffix := "js"
 	_, errExistDir := os.Stat(targetDirectory)
 	if errExistDir == nil {
 		fmt.Println("\033[31mdir exist, delete it ...\033[0m")
@@ -33,23 +34,25 @@ func main() {
 	write_to_file(index_code, targetDirectory+"/index.js")
 
 	for i := 0; i < num-1; i++ {
-		fn := fmt.Sprintf(targetDirectory+"/demo%d.js", i)
+		fn := fmt.Sprintf(targetDirectory+"/demo%d."+extensionSuffix, i)
 		code := generate_code(i)
 		write_to_file(code, fn)
 		fmt.Println(code)
 	}
 
 	end_file := generate_code_end_file(num - 1)
-	end_file_name := fmt.Sprintf(targetDirectory+"/demo"+"%d"+".js", num-1)
+	end_file_name := fmt.Sprintf(targetDirectory+"/demo"+"%d."+extensionSuffix, num-1)
 	write_to_file(end_file, end_file_name)
 
+	fmt.Println("\033[31m Creation completed, exiting...\033[0m")
 	time.Sleep(time.Duration(3) * time.Second) // wait 3 second
 }
 
 func generate_code_package(dirname string) string {
 	code_template := `{
     "main":"index.js",
-    "name": "` + "%s" + `"
+    "name": "` + "%s" + `",
+	"type":"module"
 }` + "\n"
 
 	codes := fmt.Sprintf(code_template, dirname)
