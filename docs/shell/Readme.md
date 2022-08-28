@@ -1,6 +1,8 @@
 # shell 学习
 
-### [三剑客](The_Three_Musketeers.md)
+### [命令使用](command/Readme.md)
+
+### [Linux 三剑客](The_Three_Musketeers.md)
 
 #### [shell 数据类型](datetype/Readme.md)
 
