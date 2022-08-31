@@ -1,22 +1,22 @@
 # sed 命令使用
 
-[1. 输出](#1.-输出)  
-[2. 删除](#2.-删除)  
-[3. 新增插入](#3.-新增插入)  
-[4. 新增追加](#4.-新增追加)  
-[5. 取代](#5.-取代)  
-[6. 修改](6.-修改)
-[7. 高阶操作](7.-高阶操作)
+[1. 输出](#1-输出)  
+[2. 删除](#2-删除)  
+[3. 新增插入](#3-新增插入)  
+[4. 新增追加](#4-新增追加)  
+[5. 取代](#5-取代)  
+[6. 修改](#6-修改)  
+[7. 高阶操作](#7-高阶操作)  
 
 ## sed 参数
 
-+ -i 修改文件内容 备份可以 -i.bak, bak为备份文件拓展名
-+ -e 脚本, 多个条件
-+ -f 脚本文件
-+ -n 取消自动打印,只输出指定行 一般和p搭配使用
-+ -r 使用拓展正则表达式
++ -i  &nbsp;  &nbsp; 修改文件内容 备份可以 -i.bak, bak为备份文件拓展名
++ -e  &nbsp;  &nbsp; 脚本, 多个条件
++ -f  &nbsp;  &nbsp; 使用脚本文件
++ -n  &nbsp;  &nbsp; 取消自动打印,只输出指定行 一般和p搭配使用
++ -r  &nbsp;  &nbsp; 使用拓展正则表达式
 
-### 1. 输出
+### 1 输出
 
 ```shell
 [root@dveng ~] $ sed -n '5p' file # 输出第5行
@@ -43,7 +43,7 @@ news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
 uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
 ```
 
-### 2. 删除
+### 2 删除
 
 ```shell
 [root@dveng ~] $ sed [-i] '5d' file # 删除第5行
@@ -62,7 +62,7 @@ uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
 [root@dveng ~] $ sed '/com/d' file  # 删除包含 com 内容的行，输出其他行内容
 ```
 
-### 3. 新增插入
+### 3 新增插入
 
 ```shell
 [root@dveng ~] $ sed [-i] '2i new line' file # 第2行前新增一行，即原第二行变成第三行
@@ -75,7 +75,7 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 
 ```
 
-### 4. 新增追加
+### 4 新增追加
 
 ```shell
 [root@dveng ~] $ sed [-i] '2a new line' file # 第2行后新增一行，即原第三行变成第四行
@@ -89,7 +89,7 @@ sys:x:3:3:sys:/dev:/usr/sbin/nologin
 
 ```
 
-### 5. 取代
+### 5 取代
 
 ```shell
 [root@dveng ~] $ sed '3,8c new modify line' file  # 3-8行(包含3，8行)修改成 new modify line
@@ -103,7 +103,7 @@ news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
 
 ```
 
-### 6. 修改
+### 6 修改
 
 ```shell
 [root@dveng ~] $ sed -e 's/con/com/g' file
@@ -133,11 +133,11 @@ bin:x:2:2:bin:/bin:/usr/sbin/""ogin
 sys:x:3:3:sys:/dev:/usr/sbin/""ogin
 ```
 
-### 7. 高阶操作
+### 7 高阶操作
 
 #### 7.1. 多行命令
 
-sed 特殊命令
+**sed 特殊命令**
 
 - N: 将数据流的下一行加到当前行,组成多行处理
 - D: 删除多行组的一行
@@ -320,7 +320,7 @@ Today, I goto
 There has flowers, beaufiful.
 ```
 
-[go top](#sed-命令使用)
+[go top](#sed-命令使用)  
 
 <br />
 <br />
