@@ -13,8 +13,10 @@
 + -i  &nbsp;  &nbsp; 修改文件内容 备份可以 -i.bak, bak为备份文件拓展名
 + -e  &nbsp;  &nbsp; 脚本, 多个条件
 + -f  &nbsp;  &nbsp; 使用脚本文件
++ -F  &nbsp;  &nbsp; 文本字段分隔符  
 + -n  &nbsp;  &nbsp; 取消自动打印,只输出指定行 一般和p搭配使用
-+ -r  &nbsp;  &nbsp; 使用拓展正则表达式
++ -r  &nbsp;  &nbsp; 使用拓展正则表达式  
++ -v  &nbsp;  &nbsp; 自定义变量  
 
 ### 1 输出
 
