@@ -33,6 +33,7 @@ class DumpJson:
 
 f = "a.txt"
 
+
 def a(x):
     dj = DumpJson(f)
     dj1 = DumpJson(f)
@@ -44,27 +45,18 @@ def a(x):
             dj1.write(f"{i}")
 
 
-def b(loop):
-    asyncio.set_event_loop(loop)
-    loop.run_forever()
-
-
-def c(x):
-    new_loop = asyncio.get_event_loop()
-    t1 = threading.Thread(target=b, args=(new_loop,))
-    t2 = threading.Thread(target=b, args=(new_loop,))
+def b(x):
+    t1 = threading.Thread(target=a, args=(0,))
+    t2 = threading.Thread(target=a, args=(1,))
     t1.start()
     t2.start()
     t1.join()
     t2.join()
 
-    new_loop.call_soon_threadsafe(a, 6)
-    new_loop.call_soon_threadsafe(a, 3)
-
 
 if __name__ == '__main__':
-    t1 = Process(target=c, args=(0,))
-    t2 = Process(target=c, args=(1,))
+    t1 = Process(target=b, args=(0,))
+    t2 = Process(target=b, args=(1,))
     t1.start()
     t2.start()
     t1.join()
