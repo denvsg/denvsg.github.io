@@ -9,7 +9,7 @@ def bubble_sort(list1):  #
 def select_sort(list2):
     for i in range(len(list2) - 1):
         min_index = i
-        for j in range(i + 1, n):
+        for j in range(i + 1, len(list2)):
             if list2[j] < list2[min_index]:
                 min_index = j
         if min_index != i:

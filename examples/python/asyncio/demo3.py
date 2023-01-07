@@ -27,5 +27,6 @@ end = now()
 
 print(f"time {end - start}")
 
-new_loop.call_soon_threadsafe(do_works, 6)
-new_loop.call_soon_threadsafe(do_works, 3)
+asyncio.run_coroutine_threadsafe(do_works(6), new_loop)
+# new_loop.call_soon_threadsafe(do_works, 6)
+# new_loop.call_soon_threadsafe(do_works, 3)

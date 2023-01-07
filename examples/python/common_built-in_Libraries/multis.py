@@ -19,7 +19,7 @@ async def fun(keys, *args):
 def func(key, *args):
     # asyncio.set_event_loop(loops)
     # loops.run_forever()
-    coroutines = []
+    # coroutines = []
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     tasks = [fun(key, args),

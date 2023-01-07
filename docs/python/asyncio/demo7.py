@@ -23,6 +23,7 @@ async def print_args(x):
 async def main():
     await asyncio.gather(do_some_work(1), do_some_work(2), do_some_work(3))
 
+
 async def main1():
     await asyncio.gather(print_args("hello"), print_args("world"), print_args("python"))
 
