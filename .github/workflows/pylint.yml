@@ -1,6 +1,6 @@
 name: pylint
 
-on: 
+on:
   push:
     branches:[ master ]
   pull_request:
@@ -9,7 +9,7 @@ jobs:
   lint:
     strategy:
       matrix:
-        python-version: ["3.7", "3.8", "3.9", "3.10"]
+        python-version: [ "3.7", "3.8", "3.9", "3.10", "3.11" ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,14 +18,23 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: 
-          pip install flake8 mypy
+        run:
+          pip install flake8 mypy pylint
       - name: Run flake8
         run:
-          flake8 $(git ls-files '*.py')
+          flake8 $(git ls-files '*.py') --count --ignore=W503 --max-line-length=127 --statistics --ignore=E731,E402,W503
           # flake8 src/ tests/ example. --exclude 'src/viztracer/attach_process/*' --count --ignore=W503 --max-line-length=127 --statistics
       - name: Run mypy
         run:
           mypy $(git ls-files '*.py')
           # mypy src/ --exclude 'src/viztracer/attach_process/.*'
+      - name: Run pylint
+        run:
+          pylint $(git ls-files '*.py') --disable=C0103,C0114,C0115,C0116,R0801,R0201,R0903,W0108,W0612,W0613,W0621 --output-format=msvs
+          # pylint src/ --exclude 'src/viztracer/attach_process/.*'
+          # (C) 惯例。违反了编码风格标准
+          # (R) 重构。写的非常糟糕的代码
+          # (W) 警告。某些python特定的问题
+          # (E) 错误。可能是代码中的错误
+          # (F) 致命错误。阻止pylint进一步执行的错误
 

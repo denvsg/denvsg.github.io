@@ -11,7 +11,7 @@ async def run_cmd(*args):
 
     stdout, stderr = await process.communicate()
     # return stdout
-    return stdout # .decode().strip()
+    return stdout  # .decode().strip()
 
 
 loop = asyncio.get_event_loop()
