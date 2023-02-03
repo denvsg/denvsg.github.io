@@ -4,7 +4,6 @@
 
 ### 参数及意义
 
-
 | 参数                                    | 意义                                                    |
 |---------------------------------------|-------------------------------------------------------|
 | -a 或 --text :                         | 不要忽略二进制的数据。                                           |
@@ -34,6 +33,23 @@
 | -w 或 --word-regexp :                  | 只显示全字符合的列。                                            |
 | -x --line-regexp :                    | 只显示全列符合的列。                                            |
 | -y :                                  | 此参数的效果和指定"-i"参数相同。                                    |
+
+#### 支持的字符集范围请查看 [正则元字符](./regex.md)
+
+```python3
+# python3 多选一匹配
+import re
+
+str1 = "This 3h, hello world 57min wait 102s. then there is go 66h."
+ret = re.findall(r"\b\d+(?:min|h|s)\b", str1)
+```
+
+```shell
+# 对应shell
+
+str1 = "This 3h, hello world 57min wait 102s. then there is go 66h."
+echo $str1 | grep - on '[0-9]\+[min|h|s]'
+```
 
 ## usage
 
