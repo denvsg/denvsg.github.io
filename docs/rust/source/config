@@ -1,0 +1,42 @@
+# rustup换源：
+# export RUST_DIST_SERVER="https://rsproxy.cn"
+# export RUST_UPDATE_ROOT="https://rsproxy.cn/rustup"
+# for windows: /m for admin 
+# setx [/m] RUST_DIST_SERVER "https://rsproxy.cn"
+# setx [/m] RUST_UPDATE_ROOT "https://rsproxy.cn/rustup"
+
+# rust crates source
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+# mirrors
+replace-with = "sjtu"
+
+# replace-with = "tuna"
+[source.tuna] # 清华
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+
+# replace-with = 'ustc'
+[source.ustc] # 中国科技大学
+registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+
+# replace-with = 'sjtu'
+[source.sjtu] # 上海交通大学
+registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
+
+[source.aliyun] # 阿里云
+registry = "https://code.aliyun.com/rustcc/crates.io-index"
+
+[source.rustcc]  # rustcc 社区
+registry = "https://crates.rustcc.cn/crates.io-index"
+
+[source.rsproxy] # 字节
+registry = "https://rsproxy.cn/crates.io-index"
+
+[source.rsproxy-spares] # nightly 可使用
+registry = "sparse+https://rsproxy.cn/index/"
+
+[registries.rsproxy]
+index = "https://rsproxy.cn/crates.io-index"
+
+[net]
+git-fetch-with-cli = true
