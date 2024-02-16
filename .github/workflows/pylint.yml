@@ -2,14 +2,14 @@ name: pylint
 
 on:
   push:
-    branches:[ master ]
+    branches: [ master ]
   pull_request:
 
 jobs:
   pylint:
     strategy:
       matrix:
-        python-version: [ "3.7", "3.8", "3.9", "3.10", "3.11" ]
+        python-version: [ "3.7", "3.8", "3.9", "3.10", "3.11", "3.12" ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,11 +23,11 @@ jobs:
       - name: Run flake8
         run:
           flake8 $(git ls-files '*.py') --count --ignore=W503 --max-line-length=127 --statistics --ignore=E731,E402,W503
-          # flake8 src/ tests/ example. --exclude 'src/viztracer/attach_process/*' --count --ignore=W503 --max-line-length=127 --statistics
+        # flake8 src/ tests/ example. --exclude 'src/viztracer/attach_process/*' --count --ignore=W503 --max-line-length=127 --statistics
       - name: Run mypy
         run:
           mypy $(git ls-files '*.py')
-          # mypy src/ --exclude 'src/viztracer/attach_process/.*'
+        # mypy src/ --exclude 'src/viztracer/attach_process/.*'
       - name: Run pylint
         run:
           pylint $(git ls-files '*.py') --disable=C0103,C0114,C0115,C0116,R0801,R0201,R0903,W0108,W0612,W0613,W0621 --output-format=msvs
