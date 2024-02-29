@@ -4,6 +4,8 @@
 
 ### [Linux 三剑客](The_Three_Musketeers.md)
 
+### [VIM使用](Vim-Usage.md)
+
 #### [shell 数据类型](datetype/Readme.md)
 
 #### [shell 条件语句](condition/Readme.md)
